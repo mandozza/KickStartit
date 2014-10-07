@@ -3,6 +3,20 @@ var uglify = require('gulp-uglify');
 var sass = require('gulp-ruby-sass');
 var plumber = require('gulp-plumber');
 var livereload= require('gulp-livereload');
+var imgmin=require('gulp-imagemin');
+
+
+
+
+
+//Images
+gulp.task('images',function(){
+	gulp.src('kickstartit/build/assets/img/*')
+	.pipe(plumber())
+	.pipe(imagemin())
+	.pipe(gulp.dest('kickstartit/production/assets/img/'));
+});
+
 
 // Scripts Task
 //Uglifies
@@ -38,3 +52,4 @@ gulp.task('watch',function(){
 
 
 gulp.task('default', ['watch','styles']);
+gulp.task('images', ['images']);
