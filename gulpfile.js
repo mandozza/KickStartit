@@ -4,7 +4,7 @@ var sass = require('gulp-ruby-sass');
 var plumber = require('gulp-plumber');
 var livereload= require('gulp-livereload');
 var imgmin=require('gulp-imagemin');
-
+var prefix = require('gulp-autoprefixer');
 
 
 
@@ -35,6 +35,7 @@ gulp.task('styles',function(){
 	.pipe(sass({
 		style: 'compressed'
 	}))
+	.pipe(prefix('last 2 versions'))
 	.pipe(gulp.dest('kickstartit/build/assets/css/styles.css'))
 	.pipe(livereload());
 });
