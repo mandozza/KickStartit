@@ -5,8 +5,7 @@ var plumber = require('gulp-plumber');
 var livereload= require('gulp-livereload');
 var imgmin=require('gulp-imagemin');
 var prefix = require('gulp-autoprefixer');
-
-
+var concat = require("gulp-concat");
 
 
 //Images
@@ -19,13 +18,16 @@ gulp.task('images',function(){
 
 
 // Scripts Task
-//Uglifies
+//Concatinate and uglify
 gulp.task('scripts',function(){
 	gulp.src('kickstartit/build/assets/js/*.js')
 	.pipe(plumber())
+	.pipe(concat('concat.js'))
 	.pipe(uglify())
 	.pipe(gulp.dest('kickstartit/build/assets/js/minjs'));
 });
+
+
 
 // Styles
 //
