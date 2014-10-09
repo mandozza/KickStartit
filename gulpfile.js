@@ -22,9 +22,7 @@ gulp.task('scripts',function(){
 });
 
 
-
 // Styles
-//
 gulp.task('styles',function(){
 	gulp.src('kickstartit/build/sass/**/*.scss')
 	.pipe(plugins.plumber())
@@ -32,21 +30,26 @@ gulp.task('styles',function(){
 		style: 'compressed'
 	}))
 	.pipe(plugins.autoprefixer('last 2 versions'))
-	.pipe(gulp.dest('kickstartit/build/assets/css/styles.css'))
-	.pipe(plugins.livereload());
+	.pipe(gulp.dest('kickstartit/build/assets/css/'))
+	.pipe(plugins.connect.reload());
+});
+
+
+gulp.task('connect', function() {
+  plugins.connect.server({
+    root: 'kickstartit/build/',
+    livereload: true
+  });
 });
 
 
 // Watch
 //watches js
 gulp.task('watch',function(){
-	//start live reload
-	var server =plugins.livereload();
-
 	gulp.watch('kickstartit/build/assets/js/*.js',['scripts']);
 	gulp.watch('kickstartit/build/sass/**/*.scss',['styles']);
 });
 
 
-gulp.task('default', ['watch','styles']);
+gulp.task('default', ['connect','watch','styles']);
 gulp.task('images', ['images']);
