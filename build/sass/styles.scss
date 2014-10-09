@@ -6,8 +6,4 @@
 @import "partials/core"; /*core*/
 @import "partials/layout"; /*layout*/
 @import "partials/typography"; /*typography*/
-
-body{
-	background-color: purple;
-	color:#fff;
-}
+@import "partials/header"; /*typography*/
