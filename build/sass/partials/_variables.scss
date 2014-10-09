@@ -1,0 +1,91 @@
+//Variables
+$wrapper:1200px;
+$base-font:1.6;
+$background-color:#FFF;
+$font-color:#FFFFFF;
+$border-radius:12px;
+$padding:10px;
+$mobilegutter:2.5%;
+
+//COLORS
+$mobilemenubarcolor:#FFF;  //white
+$contentbackgroundcolor:#FFF;  //white
+$corecolor:#231F20; //Off Black
+$secondcolor:#E21F26; //red
+$thirdcolor:lighten(#000,20%);//Darker Grey
+$forthcolor:#DDD;//light Grey
+$fifthcolor:#fff; //white
+
+$listenlivelink:#1b1b1b;
+
+$link-color:$secondcolor;
+
+
+//Navigation
+$mainnavbg:#999;
+
+
+$formbgcolor:#333333;
+
+/* SOCIAL */
+$twittercolor:#52B8E8;
+$facebookcolor:#506FBF;
+$youtubecolor:#CC181E;
+$pinterestcolor:darken(#CB2027,10%);
+$instagramcolor:#987C6B;
+$soundcloudcolor:#FF6D00;
+$androidappcolor:#008000;
+$appleappcolor:#800080;
+
+/*INPUT COLOR */
+$input-color:#231F20;
+$input-font:#FFF;
+$input-place-holder:$forthcolor; //Light Pink
+
+/* IMAGE BACKGROUNDS */
+/*$mainbodybg:"../img/binding_dark.png";*/
+$corebg:"../img/bg.jpg";
+$mainbodybg:"../img/bg.jpg";
+$mainbodybg_md:"../img/bg.jpg";
+$mainbodybg_sm:"../img/bg.jpg";
+
+$sidemenubg:"../img/sidebargrey.png";
+$maincontentbg:"../img/zwartevilt.png";
+
+
+
+/*media Query Break Points */
+/*#########################################*/
+//MEdia Query Example
+/*@include breaker($ewok $r2d2) {
+		font-size: 22px;
+	}
+*/
+
+/* Sass Breakpoint Variables */
+
+/*SMALL */
+$yoda:20em;  //320px/16px
+$ewok:0em;   // undefined - There in case needed
+$r2d2:30em;   //480px/16px
+
+/*MEDIUM*/
+$c3p0:34.375em; //550px/16
+$leia:47.937em;  //767px / 16px
+$luke:56.25em; //900px/16px;
+$han:61.1875em;    //(979px /16px
+
+/*LARGE*/
+$vader:62.5em; //1000px/16px;
+$chewie:75em;  //1200/16px
+$jabba:0em; // undefined - There in case needed
+$deathstar:0em; // undefined - There in case needed
+
+//TABLE Variables
+$table-padding:6px;
+$table-border-color:#FFF;
+$table-header-font-color:#DDD;
+$table-row-font-color:#CCC;
+$table-even-row-color:#6DBCDB;
+$table-header-color: #202D44;
+

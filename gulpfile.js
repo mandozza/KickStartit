@@ -4,40 +4,40 @@ plugins = gulpLoadPlugins();
 
 //Images
 gulp.task('images',function(){
-	gulp.src('kickstartit/build/assets/img/*')
+	gulp.src('KickStartit/build/assets/img/*')
 	.pipe(plugins.plumber())
 	.pipe(plugins.imagemin())
-	.pipe(gulp.dest('kickstartit/production/assets/img/'));
+	.pipe(gulp.dest('KickStartit/production/assets/img/'));
 });
 
 
 // Scripts Task
 //Concatinate and uglify
 gulp.task('scripts',function(){
-	gulp.src('kickstartit/build/assets/js/*.js')
+	gulp.src('KickStartit/build/assets/js/*.js')
 	.pipe(plugins.plumber())
 	.pipe(plugins.concat('concat.js'))
 	.pipe(plugins.uglify())
-	.pipe(gulp.dest('kickstartit/build/assets/js/minjs'));
+	.pipe(gulp.dest('KickStartit/build/assets/js/minjs'));
 });
 
 
 // Styles
 gulp.task('styles',function(){
-	gulp.src('kickstartit/build/sass/**/*.scss')
+	gulp.src('KickStartit/build/sass/styles.scss','KickStartit/build/sass/**/*.scss')
 	.pipe(plugins.plumber())
 	.pipe(plugins.rubySass({
 		style: 'compressed'
 	}))
 	.pipe(plugins.autoprefixer('last 2 versions'))
-	.pipe(gulp.dest('kickstartit/build/assets/css/'))
+	.pipe(gulp.dest('KickStartit/build/assets/css/'))
 	.pipe(plugins.connect.reload());
 });
 
 
 gulp.task('connect', function() {
   plugins.connect.server({
-    root: 'kickstartit/build/',
+    root: 'KickStartit/build/',
     livereload: true
   });
 });
@@ -46,8 +46,8 @@ gulp.task('connect', function() {
 // Watch
 //watches js
 gulp.task('watch',function(){
-	gulp.watch('kickstartit/build/assets/js/*.js',['scripts']);
-	gulp.watch('kickstartit/build/sass/**/*.scss',['styles']);
+	gulp.watch('KickStartit/build/assets/js/*.js',['scripts']);
+	gulp.watch('KickStartit/build/sass/**/*.scss',['styles']);
 });
 
 

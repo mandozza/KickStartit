@@ -1,0 +1,38 @@
+// set up box sizing on all items
+*{box-sizing: border-box;}
+
+//REMOVE GLOW on focus
+:focus {
+  outline: 0;
+}
+
+/*make  images objects iframes*/
+img,object{
+    max-width:100%;
+    height:auto;
+}
+
+iframe{
+     max-width:100%;
+}
+
+
+
+
+body{
+    color:$font-color;
+}
+
+#wrapper{
+    //background-color: #DDD;
+}
+
+
+
+
+
+
+
+
+
+

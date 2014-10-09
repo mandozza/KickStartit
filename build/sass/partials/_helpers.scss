@@ -1,0 +1,113 @@
+.circleborder{
+    border-radius: 90%;
+    /* Prevent background color leak outs */
+    -webkit-background-clip: padding-box;
+    -moz-background-clip:    padding;
+    background-clip:         padding-box;
+}
+
+// clear fix
+// @extend .clearfix;
+.clearfix {
+    zoom:1;
+    &:before, &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+//####################
+//RWD HELPER CLASSES
+//#####################
+//Table RWD  Helper class
+td.hidden_sm,th.hidden_sm{
+    display:none;
+    @include breaker($r2d2) {
+        display:  table-cell;
+    }
+}
+
+td.hidden_md,th.hidden_md{
+    display:none;
+    @include breaker($leia) {
+        display:  table-cell;
+    }
+}
+.hidden_sm{
+    display:none;
+    @include breaker($c3p0) {
+        display: inline;
+    }
+}
+
+.hidden_md{
+    display:none;
+    @include breaker($leia) {
+        display: inline;
+    }
+}
+.hidden_md_after{
+     @include breaker($leia) {
+    display:none;
+     }
+}
+
+.show-inline-lg{
+    display:inline-block;
+}
+
+.pull-right{
+       text-align:center;
+     @include breaker($leia) {
+         text-align:right;
+    }
+}
+
+.centerthis{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centerbutton{
+        text-align: center;
+        @include breaker($leia) {
+                   text-align: center;
+        }
+
+}
+
+//SLIDER FIX
+.sliderfix{
+    -webkit-backface-visibility: hidden;
+}
+
+// Starts a new list fresh
+//@extend .newlist
+.newlist{
+  list-style-type: none;
+  padding-left: 0;
+  overflow:auto;
+}
+
+//@extend .mainbodypadding
+.mainbodypadding{
+    padding-left: 2.5%;
+    padding-right:2.5%;
+}
+
+// Button holder layouts
+.buttonholder{
+    text-align: center;
+}
+
+.buttonholder-right{
+    text-align: right;
+}
+
+

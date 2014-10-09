@@ -1,3 +1,12 @@
+@import "partials/normalize"; /*Normalize*/
+@import "partials/mixins"; /*mixins*/
+@import "partials/variables"; /*variables*/
+@import "partials/helpers"; /*helpers*/
+@import "partials/grid"; /*helpers*/
+@import "partials/core"; /*core*/
+@import "partials/layout"; /*layout*/
+
 body{
-	background-color: blue;
+	background-color: purple;
+	color:#fff;
 }

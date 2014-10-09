@@ -1,0 +1,97 @@
+//###########################
+//Converts pixels to EMs
+//###############################
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em
+}
+
+/* ######################################
+Font Size RWD
+#################################*/
+
+@mixin font-size($size: 1.6, $line: $size * 1.25){
+	font-size: ($size * 10) + px;
+	line-height: ($line * 10)+ px;
+	//font-size: $size + rem;
+	//line-height: $line + rem;
+}
+
+/* #############################
+MEDIA QUERY MIXIN FOR MOBILE FIRST APPROACH
+############################# */
+@mixin breaker($breakpoint1,$breakpoint2:0) {
+
+  @if $breakpoint2 == 0 {
+
+   @media only screen and (min-width: $breakpoint1) { @content; }
+
+  } @else {
+
+    @media only screen and (min-width: $breakpoint1) and (max-height: $breakpoint2) { @content; }
+
+  }
+}
+/* ######################################
+Center block
+#################################*/
+ @mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*##################################
+Transition Effect
+##################################*/
+  @mixin transition($transition:all 0.2s) {
+  -ms-transition:$transition; // IE10+
+  -o-transition:$transition; // Opera
+  -moz-transition:$transition; // Firefox
+  -webkit-transition:$transition; // Webkit (Safari, Chrome, other)
+  transition:$transition;
+}
+/*#############################
+ faint letter press effect
+####################*/
+@mixin letterpress($opacity: 0.5){
+  	text-shadow : 0 2px 0 rgba(0,0,0,$opacity);
+}
+/* letter press light */
+@mixin letterpresslight($opacity: 0.5){
+	 text-shadow:0 2px 0 rgba(255,255,255,$opacity);
+}
+/*#############################
+/* OPACITY STUFF
+####################*/
+@mixin border-opacity($size ,$color, $opacity){
+
+  border : solid $size $color; /*include incase browser doesn't support*/
+  border : solid $size rgba($color, $opacity) ;
+}
+
+@mixin background-opacity($color, $opacity){
+
+  /* Fallback for web browsers that don't support RGBa */
+    background-color: $color;
+    /* RGBa with 0.6 opacity */
+    background-color: rgba($color, $opacity);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99$color, endColorstr=#99$color);
+    /* For IE 8*/
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99$color, endColorstr=#99$color);
+}
+
+@mixin clearfix {
+    zoom:1;
+    &:before, &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
