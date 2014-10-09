@@ -28,10 +28,10 @@ gulp.task('scripts',function(){
 gulp.task('styles',function(){
 	gulp.src('kickstartit/build/sass/**/*.scss')
 	.pipe(plugins.plumber())
-	.pipe(plugins.sass({
+	.pipe(plugins.rubySass({
 		style: 'compressed'
 	}))
-	.pipe(plugins.prefix('last 2 versions'))
+	.pipe(plugins.autoprefixer('last 2 versions'))
 	.pipe(gulp.dest('kickstartit/build/assets/css/styles.css'))
 	.pipe(plugins.livereload());
 });
@@ -41,7 +41,7 @@ gulp.task('styles',function(){
 //watches js
 gulp.task('watch',function(){
 	//start live reload
-	var server =livereload();
+	var server =plugins.livereload();
 
 	gulp.watch('kickstartit/build/assets/js/*.js',['scripts']);
 	gulp.watch('kickstartit/build/sass/**/*.scss',['styles']);
