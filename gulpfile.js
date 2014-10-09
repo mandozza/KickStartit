@@ -1,18 +1,12 @@
-var gulp = require('gulp');
-var uglify = require('gulp-uglify');
-var sass = require('gulp-ruby-sass');
-var plumber = require('gulp-plumber');
-var livereload= require('gulp-livereload');
-var imgmin=require('gulp-imagemin');
-var prefix = require('gulp-autoprefixer');
-var concat = require("gulp-concat");
-
+var gulp = require('gulp'),
+gulpLoadPlugins = require('gulp-load-plugins'),
+plugins = gulpLoadPlugins();
 
 //Images
 gulp.task('images',function(){
 	gulp.src('kickstartit/build/assets/img/*')
-	.pipe(plumber())
-	.pipe(imagemin())
+	.pipe(plugins.plumber())
+	.pipe(plugins.imagemin())
 	.pipe(gulp.dest('kickstartit/production/assets/img/'));
 });
 
@@ -21,9 +15,9 @@ gulp.task('images',function(){
 //Concatinate and uglify
 gulp.task('scripts',function(){
 	gulp.src('kickstartit/build/assets/js/*.js')
-	.pipe(plumber())
-	.pipe(concat('concat.js'))
-	.pipe(uglify())
+	.pipe(plugins.plumber())
+	.pipe(plugins.concat('concat.js'))
+	.pipe(plugins.uglify())
 	.pipe(gulp.dest('kickstartit/build/assets/js/minjs'));
 });
 
@@ -33,13 +27,13 @@ gulp.task('scripts',function(){
 //
 gulp.task('styles',function(){
 	gulp.src('kickstartit/build/sass/**/*.scss')
-	.pipe(plumber())
-	.pipe(sass({
+	.pipe(plugins.plumber())
+	.pipe(plugins.sass({
 		style: 'compressed'
 	}))
-	.pipe(prefix('last 2 versions'))
+	.pipe(plugins.prefix('last 2 versions'))
 	.pipe(gulp.dest('kickstartit/build/assets/css/styles.css'))
-	.pipe(livereload());
+	.pipe(plugins.livereload());
 });
 
 
