@@ -1,0 +1,51 @@
+.services{
+	border-top: 5px $fifthcolor solid;
+	background-color: $forthcolor;
+	padding-top: em(16);
+	color:$sixthcolor;
+	@include letterpress(.3);
+	H2{
+		margin-top:0;
+		margin-bottom:0;
+		padding-left:em(16);
+		color:$sixthcolor;
+		@include letterpress(.3);
+	}
+	ul{
+		@include reset-ul();
+		@include clearfix();
+	}
+	li{
+		margin-top:em(16);
+		width:100%;
+		padding:8px;
+		@include breaker($leia){
+			width:48%;
+			float:left;
+		}
+		@include breaker($han){
+			width:33%;
+			float:left;
+		}
+	}
+	.thumbnail{
+		text-align: center;
+		img{
+			max-width:70%;
+		}
+	}
+	.circleborder{
+		border:8px  $fifthcolor solid;
+
+	}
+	h4{
+
+		background-color: $corecolor;
+		padding:8px;
+		padding-left: em(22);
+		border-radius: 1em 4em 1em 4em;
+	}
+	footer{
+	text-align: right;
+	}
+}
