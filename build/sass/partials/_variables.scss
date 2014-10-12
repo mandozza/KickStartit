@@ -1,8 +1,9 @@
 //Variables
 $wrapper:1200px;
 $base-font:1.6;
-$background-color:#FFF;
-$font-color:#FFFFFF;
+$background-color: #ECF0F1; //#F7F4ED
+$font-color:#999999;
+$mainbody-font-color:#999;
 $border-radius:12px;
 $padding:10px;
 $mobilegutter:2.5%;
@@ -16,11 +17,13 @@ $secondaryfont:'Montserrat', sans-serif;
 $testcolor:#E21F26;
 $mobilemenubarcolor:#FFF;  //white
 $contentbackgroundcolor:#FFF;  //white
-$corecolor:#231F20; //Off Black
-$secondcolor:#E21F26; //red
-$thirdcolor:lighten(#000,20%);//Darker Grey
-$forthcolor:#DDD;//light Grey
-$fifthcolor:#fff; //white
+$corecolor:#2C3E50; //Deep Blue
+$secondcolor:#E74C3C; //red
+$thirdcolor:#ECF0F1;//Creame
+$forthcolor:#3498DB;//Blue
+$fifthcolor:#2980B9; //Deep Blue
+$sixthcolor:#fff; //white
+$reservationbg:#CCC;
 
 $listenlivelink:#1b1b1b;
 
@@ -46,12 +49,14 @@ $appleappcolor:#800080;
 /*INPUT COLOR */
 $input-color:#231F20;
 $input-font:#FFF;
-$input-place-holder:$forthcolor; //Light Pink
+$input-place-holder:$fifthcolor; //Light Pink
 
 /* IMAGE BACKGROUNDS */
 /*$mainbodybg:"../img/binding_dark.png";*/
+$headerbg1:"../img/core.jpg";
+$leatherbg:"../img/dark_leather.png";
 $corebg:"../img/bg.jpg";
-$mainbodybg:"../img/bg.jpg";
+$mainbodybg:"../img/cream_dust.png";
 $mainbodybg_md:"../img/bg.jpg";
 $mainbodybg_sm:"../img/bg.jpg";
 

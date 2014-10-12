@@ -1,7 +1,50 @@
 .header{
-	background-color: #000;
+	z-index: 1;
+	position: relative;
+	@include background($headerbg1);
+	min-height:em(700);
+	display:block;
+	@include border-opacity("bottom",2px ,#DDD, .5);
 	.header-topbar{
-		background-color: lighten(#000,20%);
+		@include background-opacity(#000000, .5);
+		@include border-opacity("bottom",1px ,#fff, .5);
 		padding:6px;
+		height:em(30);
+	}
+	.header-topbar-inside-leftside{
+		width:50%;
+		float:left;
+		padding-left:em(10);
+	}
+	.header-topbar-inside-rightside{
+		width:50%;
+		float:left;
+		text-align:right;
+		padding-right:em(10);
+	}
+}
+
+.header-inside{
+	display: block;
+	div{
+		text-align: center;
+	}
+	.logo{
+		display:inline-block;
+	}
+	h1{
+		font-size:em(50);
+		margin: 0;
+		@include letterpress(.8);
+	}
+	h4{
+		margin: 0;
+		@include letterpress(.8);
+		font-family:$secondaryfont;
+		font-weight:400;
+	}
+	hr{
+		width:80%;
+		@include border-opacity("none",1px ,#fff, .5);
 	}
 }

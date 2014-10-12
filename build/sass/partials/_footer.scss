@@ -1,0 +1,11 @@
+.footer{
+	padding-top:em(4);
+	margin-top:em(16);
+	background: #000000 url($leatherbg);
+	height:em(80);
+	display: block;
+	.footer-inside{
+		border-top :1px #FFF solid;
+
+	}
+}

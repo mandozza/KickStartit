@@ -1,0 +1,251 @@
+ /*remove google glow */
+ textarea, input ,select{ outline: none; }
+ .form-note{
+ 	color:$input-font;
+ }
+
+ .required,.form-note{
+  font-size:em(12);
+  font-weight: 700;
+}
+
+ .form-row{
+	padding-top:em(8);
+	padding-bottom:em(8);
+	overflow: auto;
+ }
+
+select{
+ 	border: 1px solid #ccc;
+ 	 color: $input-font;
+}
+input,select,textarea{
+	background-color:$input-color;
+            border: 0px inset;
+            border-bottom:1px solid  rgba(#fff, .3);
+}
+
+label{
+	display:block;
+	width:100%;
+	padding-top:em(8);
+	padding-bottom:em(4);
+}
+
+//placeholder color
+ ::-webkit-input-placeholder {
+   color: $input-place-holder;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+         color: $input-place-holder;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+        color: $input-place-holder;
+}
+
+:-ms-input-placeholder {
+        color: $input-place-holder;
+}
+
+ .form-inline-checkbox, .form-inline-radio{
+ 	.center-radio{
+ 		text-align: center;
+ 		margin-bottom: .8em;
+ 	}
+
+ 	 label:first-child{
+ 	 	width:100%;
+	}
+
+	label{
+		width: auto;
+		display:inline-block;
+	}
+	input{
+		display:inline-block;
+		width: auto;
+		margin-left: .8em;
+
+	}
+
+}
+
+
+.form-buttonholder{
+	padding-top:em(8);
+	padding-bottom:em(8);
+	margin-bottom:em(32);
+	overflow: auto;
+	.leftpost{
+		width:50%;
+		float:left;
+	}
+	.rightpost{
+		width:50%;
+		float:left;
+		text-align: right;
+
+	}
+
+}
+
+
+textarea{
+	display:block;
+	width:100%;
+	min-height:em(125);
+	@include breaker($leia){
+	width:100%;
+	}
+}
+
+
+input[type="text"],input[type="file"],input[type="password"]{
+	display:block;
+	width:100%;
+	@include breaker($leia){
+	width:100%;
+	}
+	&.input10{
+		display:inline-block;
+		width:20%;
+		@include breaker($leia){
+		width:20%;
+		display:inline-block;
+		}
+		@include breaker($vader){
+		width:10%;
+		}
+	}
+	&.input25{
+	@include breaker($leia){
+		width:25%;
+		display:inline-block;
+		}
+	}
+	&.input50{
+		@include breaker($leia){
+		width:50%;
+		display:inline-block;
+		}
+	}
+	&.input75{
+	      @include breaker($leia){
+		width:75%;
+		display:inline-block;
+	       }
+	}
+}
+
+input[type="radio"],input[type="checkbox"]{
+	margin-right:em(10);
+}
+
+input[type="submit"]{
+	border: none;
+             padding: 12px 0px 12px 0px;
+             font-size: em(16);
+             font-weight: 700;
+}
+
+select{
+	  display:block;
+	   width:100%;
+	   padding: 5px;
+	   height: 34px;
+	   @include breaker($leia){
+	width:70%;
+	}
+}
+
+textarea{
+	border-radius:$border-radius;
+	padding:6px;
+	color:$input-font;
+
+}
+
+input[type="text"],input[type="file"],input[type="password"]{
+	border-radius:$border-radius;
+	padding:6px;
+	color:$input-font;
+}
+
+input[type="submit"]{
+	border: none;
+	padding: 12px 0px 12px 0px;
+	color:$input-font;
+}
+.formnotes{
+	margin-top:1em;
+}
+
+.question{
+	font-weight:700;
+}
+
+.form-row #submit{
+	margin-left:auto;
+	margin-right:auto;
+}
+
+//POll Stuff
+.form-poll{
+	.question{
+		display:block;
+		width:100%;
+
+	}
+	.answer{
+		padding-left:em(2);
+		display:inline-block;
+	}
+	.poll-results{
+		min-width:10%;
+		display:block;
+		padding:6px;
+		color:#FFF;
+		border-radius: $border-radius;
+	}
+}
+
+//Contest Form
+.contest-form{
+    margin-top:em(16);
+    margin-bottom:em(16);
+    border-radius:$border-radius;
+    background-color: lighten($corecolor,30%);
+    border-bottom:1px solid  rgba(#FFF, .3);
+    @include letterpress(0.5);
+    .headerlabel{
+        @include letterpress(0.5);
+        background-color: $secondcolor;
+        border-bottom: 2px solid  darken($secondcolor,20%);
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+        padding-left:em(30);
+        margin-bottom:em(16);
+        color:$fifthcolor;
+        font-weight: 700;
+    }
+    .form-row{
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+        label{
+            color:$fifthcolor;
+            font-weight: 700;
+        }
+        .required{
+            color:$fifthcolor;
+        }
+    }
+}
+
+#filecover1, #filecover2,#filecover3{
+    width: 70%;
+    float: left;
+    margin-right: 2%;
+}
+

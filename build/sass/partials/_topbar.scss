@@ -1,0 +1,46 @@
+.topbar{
+	min-height:em(60);
+	background-color: $corecolor;
+	color:$secondcolor;
+	border-bottom:3px darken($corecolor,20%) solid;
+}
+
+.topbar-inside{
+	min-height:em(57);
+}
+.topbar-inside-left{
+	float:left;
+	width:30%;
+}
+
+.topbar-inside-right{
+	position:relative;
+	float:left;
+	width:70%;
+	ul{
+		position: absolute;
+		right:0;
+		margin-top: 0;
+		margin-bottom: 0;
+		list-style-type: none;
+		padding-left: 0;
+		li{
+			float:left;
+			min-height:em(58);
+			padding:18px 2px;
+			a{
+				padding:10px;
+				border-radius:$border-radius;
+				color:$thirdcolor;
+				text-decoration: none;
+				font-weight:700;
+				@include letterpress(.3);
+				@include transition;
+				&:hover{
+					color:$secondcolor;
+					background-color: darken($corecolor,20%);
+				}
+			}
+		}
+	}
+}

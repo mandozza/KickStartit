@@ -1,0 +1,14 @@
+.mobilenav-toggle{
+	position: absolute;
+	top:40px;
+	right:20px;
+	border-radius:$border-radius;
+	color:#FFF;
+	font-size:em(30);
+	padding:6px;
+	@include background-opacity(#000000, .5);
+	@include transition;
+	&:hover{
+		@include background-opacity(#000000, .9);
+	}
+}

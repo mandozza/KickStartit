@@ -1,0 +1,181 @@
+button{
+  border: none;
+  padding: 12px 0px 12px 0px;
+}
+
+.btn{
+	padding:8px 16px;
+      display: inline-block;
+       text-align: center;
+      border-radius: $border-radius;
+      text-decoration: none;
+      border-bottom: 3px darken($secondcolor,20%) solid;
+      @include letterpress(0.5);
+       background-color: $secondcolor;
+       color:$sixthcolor;
+       @include transition;
+       cursor:pointer;
+}
+
+.btn_dk{
+  padding:8px;
+      display: inline-block;
+       text-align: center;
+      border-radius: $border-radius;
+      text-decoration: none;
+      @include letterpress(0.5);
+       background-color: $corecolor;
+       color:$fifthcolor;
+       @include transition;
+}
+
+
+
+
+
+.btn:hover{
+  background-color: darken($secondcolor,10%);
+   color:$sixthcolor;
+}
+
+.btn-md{
+          width:45%;
+          font-size:em(12);
+}
+
+
+//Specialty buttons
+
+.redirectbtn{
+  width:80%;
+   font-size:em(16);
+}
+
+
+.fourofour-message{
+        .btn-md{
+                width:45%;
+                @include font-size(1);
+      }
+  }
+
+
+
+/*SPECIALS */
+
+
+.btn-contact{
+  margin-top:.5em;
+    color:#fff;
+    width:90%;
+    padding:8px 15px 12px 15px;
+    font-size:em(30);
+}
+
+.btn-mini{
+    padding:8px 10px 8px 10px;
+    font-size:em(12);
+}
+
+.btn-blogactions{
+      width:45%;
+      margin-left: 2%;
+     max-width:em(240);
+
+}
+
+/*social*/
+
+/* SOCIAL BUTTONS*/
+.btn-twitter{
+      background-color: $twittercolor;
+      &:hover{
+        background-color: darken($twittercolor,20%);
+      }
+}
+
+.btn-facebook{
+      background-color: $facebookcolor;
+       &:hover{
+        background-color: darken($facebookcolor,20%);
+      }
+}
+
+
+.btn-twitter,.btn-facebook{
+  font-size:em(13);
+  width:48%;
+  max-width:em(160);
+ @include breaker($r2d2) {
+      font-size:em(14);
+  }
+
+
+  @include breaker($c3p0) {
+      font-size:em(16);
+  }
+
+}
+.btn_login-facebook{
+  width:95%;
+}
+.btn_login-twitter{
+  width:95%;
+}
+
+.btn-viewall{
+    background-color: $thirdcolor;
+}
+
+.btn-upload{
+
+}
+
+.btn-remove{
+
+}
+
+.btn-clickhere{
+  margin-top:1em;
+}
+
+/* Close Buttons*/
+.close {
+  float: right;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+  color: #000000;
+  text-shadow: 0 1px 0 #ffffff;
+}
+
+.close:hover,
+.close:focus {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+button.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+
+.member-btn{
+  font-size:em(16);
+  width:80%;
+  padding-top: em(12);
+   padding-bottom: em(12);
+}
+
+.news-btn{
+  width:30%;
+}
+

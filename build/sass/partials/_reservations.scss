@@ -1,0 +1,30 @@
+.reservations{
+	position: relative;
+	z-index: 100;
+	margin-top:-50px;
+	.reservations-inside{
+		background-color: $reservationbg;
+		background: #000000 url($leatherbg);
+		-webkit-box-shadow: 0px -1px 22px -1px rgba(0,0,0,0.75);
+		-moz-box-shadow: 0px -1px 22px -1px rgba(0,0,0,0.75);
+		box-shadow: 0px -1px 22px -1px rgba(0,0,0,0.75);
+		min-height:em(300);
+		width:90%;
+		padding:8px;
+	}
+	.reservations-inside-form{
+		@include border-opacity(none, 1px ,#FFF, .5);
+		min-height:em(300);
+		padding:8px;
+	}
+	h2{
+		margin-top:0;
+		@include letterpress(.3);
+	}
+	.button-row{
+		margin-top:em(12);
+		text-align: right;
+
+	}
+}
+

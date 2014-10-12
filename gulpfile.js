@@ -42,14 +42,25 @@ gulp.task('connect', function() {
   });
 });
 
+gulp.task('fileinclude', function() {
+  gulp.src(['KickStartit/build/index.html'])
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(gulp.dest('./'));
+});
+
 
 // Watch
 //watches js
 gulp.task('watch',function(){
 	gulp.watch('KickStartit/build/assets/js/*.js',['scripts']);
 	gulp.watch('KickStartit/build/sass/**/*.scss',['styles']);
+	gulp.watch('KickStartit/build/*.html',['styles']);
 });
 
 
 gulp.task('default', ['connect','watch','styles']);
 gulp.task('images', ['images']);
+gulp.task('html', ['fileinclude']);

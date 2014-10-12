@@ -2,14 +2,9 @@ body{
 	height:100%;
 	min-height:100%;
 	position:relative;
-	background-color: #000;
+	background-color: $background-color;
 	  @include breaker($leia) {
-	  background-color: #000;
-       	 background: url($mainbodybg) no-repeat center center fixed;
-	  -webkit-background-size: cover;
-	  -moz-background-size: cover;
-	  -o-background-size: cover;
-	  background-size: cover;
+	  background-color: $background-color;
     	}
 }
 
@@ -50,57 +45,44 @@ body{
 	}
 }
 
-.mainbody,.fourofourBody{
-	margin-top:0;
-  	padding-left: $mobilegutter;
-    	padding-right:$mobilegutter;
+.mainbody{
+	background: url($mainbodybg);
+	margin-top:em(32);
+	width:90%;
+	@include center-block;
+	background-color: #FFF;
+	padding:8px;
 	min-height:em(150);
+	-webkit-box-shadow: 0px -1px 11px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px -1px 11px -1px rgba(0,0,0,0.75);
+	box-shadow: 0px -1px 11px -1px rgba(0,0,0,0.75);
 	@include breaker(c3p0){
-	min-height:em(300);
+		min-height:em(300);
+		width:100%;
 	}
-
-
 	@include breaker($leia) {
-		margin-top: em(75);
+		margin-top: em(30);
+		width:100%;
+		padding-left:16px;
+		padding-right:16px;
+		padding-bottom:16px;
 	}
-	.onair{
-		display:none;
-		@include breaker($c3p0) {
-			min-height:em(300);
-			display:inline;
-			width:49%;
-			margin-right:1%;
-		}
-		@include breaker($leia) {
-			width:32%;
-			margin-right:0;
-		}
-		a{
-		@extend .centerthis;
-		display: inherit;
-		}
+	.mainbody-inside{
+		width:100%;
+		padding:8px;
+		color:$mainbody-font-color;
+		@include border-opacity(none, 1px ,#000, .2);
+		min-height:em(300);
 	}
-	.logo{
-	      text-align:center;
-		min-height:em(150);
-		@include breaker($c3p0) {
-			width:49%;
-			min-height:em(250);
-		}
-		@include breaker($leia) {
-			width:32%;
-			min-height:em(300);
-		}
+	h2{
+		padding-right:em(16);
+		display:inline-block;
+		margin-top: 0;
+		margin-bottom: 0;
+		@include border-opacity(bottom, 1px ,#000, .2);
 	}
-	.social{
-		text-align:center;
-	      display:none;
-		@include breaker($leia) {
-			min-height:em(300);
-			width:32%;
-			display:inline;
-		}
-	}
+
+
 }
 
 .mainarea{
@@ -112,33 +94,14 @@ body{
 	border-top-left-radius:$border-radius;
 	@include breaker($leia) {
 		padding-top:em(32);
-		@include border-opacity(5px,  #ccc, .3);
+		@include border-opacity(none,5px,  #ccc, .3);
 		border-bottom:0;
 	}
 }
 
-.mainbody-inside{
-	background-color: $background-color;
-	background: url($maincontentbg);
-	min-height:600px;
-	color:$font-color;
-	@include breaker($leia) {
-		-webkit-box-shadow: 0px 1px 11px 0px rgba(50, 50, 50, 0.75);
-		-moz-box-shadow:    0px 1px 11px 0px rgba(50, 50, 50, 0.75);
-		box-shadow:         0px 1px 11px 0px rgba(50, 50, 50, 0.75);
-	}
 
-}
 
-.mainarea-main, .mainbody-inside-main {
-	margin-top:0;
-	padding-left: $mobilegutter;
-	padding-right:$mobilegutter;
-	margin-bottom:0;
-	@include breaker($leia) {
 
-	}
-}
 
 .mainarea-sidebar  {
 	@include breaker($leia) {

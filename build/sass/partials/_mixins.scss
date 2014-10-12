@@ -1,3 +1,17 @@
+//######################
+//BG Mixin
+//#####################
+@mixin background($bg){
+      background: url($bg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+
+
 //###########################
 //Converts pixels to EMs
 //###############################
@@ -64,10 +78,22 @@ Transition Effect
 /*#############################
 /* OPACITY STUFF
 ####################*/
-@mixin border-opacity($size ,$color, $opacity){
+@mixin border-opacity($location, $size ,$color, $opacity){
 
-  border : solid $size $color; /*include incase browser doesn't support*/
-  border : solid $size rgba($color, $opacity) ;
+
+  @if $location == "bottom"{
+
+      border-bottom : solid $size $color; /*include incase browser doesn't support*/
+      border-bottom : solid $size rgba($color, $opacity) ;
+
+  } @else {
+
+      border : solid $size $color; /*include incase browser doesn't support*/
+      border : solid $size rgba($color, $opacity) ;
+  }
+
+
+
 }
 
 @mixin background-opacity($color, $opacity){
