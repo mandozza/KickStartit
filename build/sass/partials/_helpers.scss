@@ -110,4 +110,28 @@ td.hidden_md,th.hidden_md{
     text-align: right;
 }
 
+//triangles
+ .triangle{
+        position:absolute;
+        top:-8px;
+        left:40%;
+        width:90px;
+        height:56px;
+        z-index:201;
+        display:inline-block;
+        @include breaker($leia){
+             left:46%;
+        }
+    }
+    .orange-triangle{
+         background: url($orangetriangle);
+    }
+    .blue-triangle{
+         background: url($bluetriangle);
+    }
+    .creme-triangle{
+         background: url($cremetriangle);
+    }
+
+
 
