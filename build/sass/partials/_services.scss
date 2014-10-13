@@ -2,6 +2,7 @@
 	border-top: 5px $fifthcolor solid;
 	background-color: $forthcolor;
 	padding-top: em(16);
+	padding-bottom: em(16);
 	color:$sixthcolor;
 	@include letterpress(.3);
 	H2{

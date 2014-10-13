@@ -1,14 +1,398 @@
 .mobilenav-toggle{
+	@include breaker($leia){
+		display:none;
+	}
 	position: absolute;
-	top:40px;
-	right:20px;
+	top:5px;
+	right:13px;
 	border-radius:$border-radius;
 	color:#FFF;
 	font-size:em(30);
 	padding:6px;
-	@include background-opacity(#000000, .5);
+	@include background-opacity($fifthcolor, .5);
 	@include transition;
 	&:hover{
-		@include background-opacity(#000000, .9);
+		@include background-opacity($fifthcolor, .2);
 	}
+}
+
+.sb-slidebar {
+        width: em(250);
+        @include letterpress(0.2);
+        background-color: #535a63;
+        background: url($sidemenubg);
+        color:#FFF;
+        border-right: 2px lighten(#000,10%) solid;
+        @include breaker($leia) {
+            display:none;
+        }
+
+         .sb-slidebar-logo {
+                max-height:200px;
+                margin-top:em(16);
+                margin-left: auto;
+                margin-right:auto;
+            }
+
+
+        h3 {
+            margin-top:0;
+            margin-left: 10px;
+            margin-bottom: 0;
+            .accent{
+                 color:$secondcolor;
+            }
+        }
+        ul {
+            margin-top: 20px;
+            list-style-type: none;
+            margin-left: -40px;
+            li {
+                margin-bottom: 0px;
+                a {
+                    width: 100%;
+                    display: inline-block;
+                    padding: 10px;
+                    text-decoration: none;
+                    @include letterpresslight(.2);
+                    background-color:transparent;
+                    border-bottom:#000 1px solid;
+                    border-left:#000 4px solid;
+                    color:#FFF;
+                    @include transition;
+                    &:hover {
+                        padding-left: 20px;
+                        background-color:$secondcolor ;
+                        border-left:darken($secondcolor ,30%) 4px solid;
+                        @include letterpress();
+                    }
+                }
+                .active{
+                background-color:$secondcolor ;
+                border-left:darken($secondcolor ,30%) 4px solid;
+                @include letterpress();
+                padding-left:20px;
+            }
+            .listenlivelink{
+                background-color:lighten($corecolor,30%);
+                @include transition;
+                &:hover{
+                    background-color:lighten($corecolor,20%);
+                    border-left:lighten($corecolor ,5%) 4px solid;
+                }
+            }
+            .facebooklink{
+                background-color:$facebookcolor;
+                @include transition;
+                &:hover{
+                    background-color:darken($facebookcolor,20%) ;
+                    border-left:darken($facebookcolor ,30%) 4px solid;
+                }
+            }
+            .twitterlink{
+                background-color:$twittercolor;
+                @include transition;
+                &:hover{
+                    background-color:darken($twittercolor,20%) ;
+                    border-left:darken($twittercolor ,30%) 4px solid;
+                }
+            }
+             .youtubelink{
+                background-color:$youtubecolor;
+                @include transition;
+                &:hover{
+                    background-color:darken($youtubecolor,20%) ;
+                    border-left:darken($youtubecolor ,30%) 4px solid;
+                }
+            }
+            .instagramlink{
+                background-color:$instagramcolor;
+                @include transition;
+                &:hover{
+                    background-color:darken($instagramcolor,20%) ;
+                    border-left:darken($instagramcolor ,30%) 4px solid;
+                }
+            }
+           .pinterestlink{
+                background-color:$pinterestcolor;
+                &:hover{
+                    background-color:darken($pinterestcolor,20%) ;
+                    border-left:darken($pinterestcolor ,30%) 4px solid;
+                }
+            }
+           .soundcloudlink{
+                background-color:$soundcloudcolor;
+                &:hover{
+                    background-color:darken($soundcloudcolor,20%) ;
+                    border-left:darken($soundcloudcolor ,30%) 4px solid;
+                }
+            }
+
+          .appleapplink{
+                background-color:$appleappcolor;
+                &:hover{
+                    background-color:darken($appleappcolor,10%) ;
+                    border-left:darken($appleappcolor ,20%) 4px solid;
+                }
+            }
+            .androidapplink{
+                background-color:$androidappcolor;
+                &:hover{
+                    background-color:darken($androidappcolor,10%) ;
+                    border-left:darken($androidappcolor ,20%) 4px solid;
+                }
+            }
+        }
+
+        .padbottom {
+            margin-bottom: 15px;
+        }
+        .contact-row {
+            margin-left: em(12);
+        }
+
+
+     }
+}
+
+
+.insetline .inset-topline {
+border-bottom: #000 solid 1px;
+width: 90%;
+margin-left:auto;
+margin-right:auto;
+}
+
+.insetline .inset-bottomline {
+border-top: #777 solid 1px;
+width: 90%;
+margin-left:auto;
+margin-right:auto;
+}
+
+ .sb-slidebar-contact {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    h2 {
+        margin: 0;
+        margin-bottom: em(3);
+    }
+    .accentdark {
+        color: $secondcolor;
+    }
+}
+
+.sb-slidebar-contact-details{
+    margin-top: em(8);
+    border-radius: $border-radius;
+    padding:12px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $secondcolor;
+    text-align: center;
+    @include letterpress(0.5);
+    a{
+        color:$fifthcolor;
+        @include transition;
+        &:hover{
+            color:lighten($thirdcolor,50%);
+        }
+    }
+}
+
+
+
+/* -----------------------------------
+ * Slidebars
+ * Version 0.9.4
+ * http://plugins.adchsm.me/slidebars/
+ *
+ * Written by Adam Smith
+ * http://www.adchsm.me/
+ *
+ * Released under MIT License
+ * http://plugins.adchsm.me/slidebars/license.txt
+ *
+ * -------------------
+ * Slidebars CSS Index
+ *
+ * 001 - Box Model, Html & Body
+ * 002 - Site
+ * 003 - Slidebars
+ * 004 - Animation
+ * 005 - Helper Classes
+ *
+ * ----------------------------
+ * 001 - Box Model, Html & Body
+ */
+
+html, body, #sb-site, .sb-slidebar {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    //overflow-x: hidden; /* Stops horizontal scrolling. */
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    position: relative;
+}
+
+/* ----------
+ * 002 - Site
+ */
+
+#sb-site {
+    width: 100%;
+    position: relative;
+    z-index: 1; /* Site sits above Slidebars */
+}
+
+/* ---------------
+ * 003 - Slidebars
+ */
+
+.sb-slidebar {
+    height: 100%;
+    overflow-y: auto; /* Enable vertical scrolling on Slidebars when needed. */
+    position: fixed;
+    top: 0;
+    z-index: 0; /* Slidebars sit behind sb-site. */
+    visibility: hidden; /* Initially hide the Slidebars. */
+    background-color: #222222; /* Default Slidebars background colour, overwrite this with your own css. */
+}
+
+.sb-left {
+    left: 0; /* Set Slidebar to the left. */
+}
+
+.sb-right {
+    right: 0; /* Set Slidebar to the right. */
+}
+
+html.sb-static .sb-slidebar,
+.sb-slidebar.sb-static {
+    position: absolute; /* Makes Slidebars scroll naturally with the site, and unfixes them for Android Browser < 3 and iOS < 5. */
+}
+
+.sb-slidebar.sb-active {
+    visibility: visible; /* Makes Slidebars visibile when open. */
+}
+
+.sb-slidebar.sb-style-overlay {
+    z-index: 9999; /* Set z-index high to ensure it overlays any other site elements. */
+}
+
+/* Slidebar widths for devices that don't support media queries. */
+    .sb-slidebar {
+        width: 30%;
+    }
+
+    .sb-width-thin {
+        width: 15%;
+    }
+
+    .sb-width-wide {
+        width: 45%;
+    }
+
+@media (max-width: 480px) { /* Slidebar width on extra small screens. */
+    .sb-slidebar {
+        width: 70%;
+    }
+
+    .sb-width-thin {
+        width: 55%;
+    }
+
+    .sb-width-wide {
+        width: 85%;
+    }
+}
+
+@media (min-width: 481px) { /* Slidebar width on small screens. */
+    .sb-slidebar {
+        width: 55%;
+    }
+
+    .sb-width-thin {
+        width: 40%;
+    }
+
+    .sb-width-wide {
+        width: 70%;
+    }
+}
+
+@media (min-width: 768px) { /* Slidebar width on small screens. */
+    .sb-slidebar {
+        width: 40%;
+    }
+
+    .sb-width-thin {
+        width: 25%;
+    }
+
+    .sb-width-wide {
+        width: 55%;
+    }
+}
+
+@media (min-width: 992px) { /* Slidebar width on medium screens. */
+    .sb-slidebar {
+        width: 30%;
+    }
+
+    .sb-width-thin {
+        width: 15%;
+    }
+
+    .sb-width-wide {
+        width: 45%;
+    }
+}
+
+@media (min-width: 1200px) { /* Slidebar width on large screens. */
+    .sb-slidebar {
+        width: 20%;
+    }
+
+    .sb-width-thin {
+        width: 5%;
+    }
+
+    .sb-width-wide {
+        width: 35%;
+    }
+}
+
+/* ---------------
+ * 004 - Animation
+ */
+
+.sb-slide, #sb-site, .sb-slidebar {
+    -webkit-transition: -webkit-transform 400ms ease;
+       -moz-transition: -moz-transform 400ms ease;
+         -o-transition: -o-transform 400ms ease;
+            transition: transform 400ms ease;
+    -webkit-transition-property: -webkit-transform, left, right; /* Add left/right for Android < 4.4. */
+    -webkit-backface-visibility: hidden; /* Prevents flickering. This is non essential, and you may remove it if your having problems with fixed background images in Chrome. */
+}
+
+/* --------------------
+ * 005 - Helper Classes
+ */
+
+.sb-hide {
+    display: none; /* May be applied to control classes when Slidebars is disabled over a certain width. */
 }

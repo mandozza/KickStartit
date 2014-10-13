@@ -1,0 +1,18 @@
+.introduction{
+	border-top: 5px $secondcolor solid;
+	background-color: $corecolor;
+	padding-top: em(16);
+	padding-bottom: em(16);
+	color:$sixthcolor;
+	@include letterpress(.3);
+
+	.thumbnail{
+		padding-top:em(50);
+		margin-left:auto;
+		margin-right:auto;
+		text-align:center;
+		img{
+		max-height:em(350);
+		}
+	}
+}

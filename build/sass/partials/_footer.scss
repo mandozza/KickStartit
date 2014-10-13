@@ -1,11 +1,26 @@
 .footer{
-	padding-top:em(4);
-	margin-top:em(16);
-	background: #000000 url($leatherbg);
-	height:em(80);
-	display: block;
-	.footer-inside{
-		border-top :1px #FFF solid;
+	border-top: 3px $thirdcolor solid;
+	background-color: $forthcolor;
+	min-height:em(450);
+	color:$sixthcolor;
 
+}
+
+.footer-inside-left,.footer-inside-right{
+	min-height:em(450);
+	padding:em(10);
+}
+
+.footer-bottom-bar{
+	position:relative;
+	background-color: $corecolor;
+	min-height:em(60);
+	max-height:em(60);
+	border-top:5px $secondcolor solid;
+	.pull-right{
+		text-align:right;
+		position: absolute;
+		top:-5px;
+		right:0px;
 	}
 }

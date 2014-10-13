@@ -8,8 +8,8 @@
 			display:inline-block;
 			position: absolute;
 			padding:em(20);
-			top:30%;
-			left:50%;
+			top:10%;
+			left:20%;
 			@include background-opacity($corecolor, .3);
 			  border: 10px solid $fifthcolor;
 			  border-top: none;
@@ -22,14 +22,14 @@
 			font-family:$secondaryfont;
 			color:$sixthcolor;
 			@include letterpress(.5);
-			font-size:em(45);
+			font-size:em(35);
 		}
 		H3{
 			margin:0;
 			padding:0;
 			color:$forthcolor;
 			@include letterpress(.5);
-			font-size:em(32);
+			font-size:em(24);
 		}
 	}
 

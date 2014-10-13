@@ -18,6 +18,10 @@
 	float:left;
 	width:70%;
 	ul{
+		display:none;
+		@include breaker($leia){
+			display:inline-block;
+		}
 		position: absolute;
 		right:0;
 		margin-top: 0;

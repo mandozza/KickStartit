@@ -88,6 +88,9 @@ label{
 		text-align: right;
 
 	}
+	.pullright{
+		text-align:right;
+	}
 
 }
 
@@ -144,7 +147,7 @@ input[type="radio"],input[type="checkbox"]{
 }
 
 input[type="submit"]{
-	border: none;
+		 //border: none;
              padding: 12px 0px 12px 0px;
              font-size: em(16);
              font-weight: 700;
@@ -174,7 +177,7 @@ input[type="text"],input[type="file"],input[type="password"]{
 }
 
 input[type="submit"]{
-	border: none;
+	//border: none;
 	padding: 12px 0px 12px 0px;
 	color:$input-font;
 }
