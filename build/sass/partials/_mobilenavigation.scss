@@ -9,10 +9,10 @@
 	color:#FFF;
 	font-size:em(30);
 	padding:6px;
-	@include background-opacity($fifthcolor, .5);
+	@include background-opacity($fifthcolor, .3);
 	@include transition;
 	&:hover{
-		@include background-opacity($fifthcolor, .2);
+		@include background-opacity($fifthcolor, .5);
 	}
 }
 
@@ -73,75 +73,7 @@
                 @include letterpress();
                 padding-left:20px;
             }
-            .listenlivelink{
-                background-color:lighten($corecolor,30%);
-                @include transition;
-                &:hover{
-                    background-color:lighten($corecolor,20%);
-                    border-left:lighten($corecolor ,5%) 4px solid;
-                }
-            }
-            .facebooklink{
-                background-color:$facebookcolor;
-                @include transition;
-                &:hover{
-                    background-color:darken($facebookcolor,20%) ;
-                    border-left:darken($facebookcolor ,30%) 4px solid;
-                }
-            }
-            .twitterlink{
-                background-color:$twittercolor;
-                @include transition;
-                &:hover{
-                    background-color:darken($twittercolor,20%) ;
-                    border-left:darken($twittercolor ,30%) 4px solid;
-                }
-            }
-             .youtubelink{
-                background-color:$youtubecolor;
-                @include transition;
-                &:hover{
-                    background-color:darken($youtubecolor,20%) ;
-                    border-left:darken($youtubecolor ,30%) 4px solid;
-                }
-            }
-            .instagramlink{
-                background-color:$instagramcolor;
-                @include transition;
-                &:hover{
-                    background-color:darken($instagramcolor,20%) ;
-                    border-left:darken($instagramcolor ,30%) 4px solid;
-                }
-            }
-           .pinterestlink{
-                background-color:$pinterestcolor;
-                &:hover{
-                    background-color:darken($pinterestcolor,20%) ;
-                    border-left:darken($pinterestcolor ,30%) 4px solid;
-                }
-            }
-           .soundcloudlink{
-                background-color:$soundcloudcolor;
-                &:hover{
-                    background-color:darken($soundcloudcolor,20%) ;
-                    border-left:darken($soundcloudcolor ,30%) 4px solid;
-                }
-            }
 
-          .appleapplink{
-                background-color:$appleappcolor;
-                &:hover{
-                    background-color:darken($appleappcolor,10%) ;
-                    border-left:darken($appleappcolor ,20%) 4px solid;
-                }
-            }
-            .androidapplink{
-                background-color:$androidappcolor;
-                &:hover{
-                    background-color:darken($androidappcolor,10%) ;
-                    border-left:darken($androidappcolor ,20%) 4px solid;
-                }
-            }
         }
 
         .padbottom {

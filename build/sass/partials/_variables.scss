@@ -12,7 +12,6 @@ $corefont: 'Lato', sans-serif;
 $secondaryfont:'Montserrat', sans-serif;
 
 
-
 //COLORS
 $testcolor:#E21F26;
 $mobilemenubarcolor:#FFF;  //white
@@ -23,9 +22,6 @@ $thirdcolor:#ECF0F1;//Creame
 $forthcolor:#3498DB;//Blue
 $fifthcolor:#2980B9; //Deep Blue
 $sixthcolor:#fff; //white
-$reservationbg:#CCC;
-
-$listenlivelink:#1b1b1b;
 
 $link-color:$secondcolor;
 
@@ -33,20 +29,8 @@ $link-color:$secondcolor;
 //Navigation
 $mainnavbg:#999;
 
-
+/*Form/Input */
 $formbgcolor:#333333;
-
-/* SOCIAL */
-$twittercolor:#52B8E8;
-$facebookcolor:#506FBF;
-$youtubecolor:#CC181E;
-$pinterestcolor:darken(#CB2027,10%);
-$instagramcolor:#987C6B;
-$soundcloudcolor:#FF6D00;
-$androidappcolor:#008000;
-$appleappcolor:#800080;
-
-/*INPUT COLOR */
 $input-color:$fifthcolor;
 $input-font:#FFF;
 $input-place-holder:$corecolor; //orange

@@ -4,7 +4,6 @@
 	background-color: $forthcolor;
 	min-height:em(450);
 	color:$sixthcolor;
-
 }
 
 .footer-inside-left,.footer-inside-right{
@@ -21,7 +20,75 @@
 	.pull-right{
 		text-align:right;
 		position: absolute;
-		top:-5px;
+		top:-2px;
 		right:0px;
+	}
+}
+
+.footer-recipes{
+	margin-top:em(-50);
+	@include breaker($leia){
+		margin-top:0;
+	}
+	@include clearfix();
+	ul{
+		@include reset-ul();
+	}
+	li{
+		padding:em(12);
+		min-height:em(120);
+		@include border-opacity(bottom, 1px ,$corecolor, .3);
+		.thumbnail{
+			width:25%;
+			float:left;
+
+		}
+		.details{
+			padding:12px;
+			width:75%;
+			float:left;
+
+		}
+		@include clearfix();
+		a{
+			font-weight: 900;
+			color:$sixthcolor;
+			text-decoration: none;
+			@include letterpress(.2);
+			@include transition;
+			&:hover{
+				color:$corecolor;
+				@include letterpresslight(.2);
+			}
+		}
+		.dateposted{
+			color:$corecolor;
+			font-weight:400;
+			@include letterpresslight(.2);
+		}
+		&:last-child{
+			border-bottom:none;
+		}
+
+		@include breaker($c3p0){
+			width:50%;
+			float:left;
+			border-bottom:none;
+		}
+		@include breaker($leia){
+			width:100%;
+			float:none;
+			@include border-opacity(bottom, 1px ,$corecolor, .3);
+		}
+	}
+	img{
+		//max-height:em(90);
+	}
+	.morerecipes{
+		text-align:center;
+		font-size: em(20);
+		@include breaker($leia){
+			text-align:right;
+		}
 	}
 }

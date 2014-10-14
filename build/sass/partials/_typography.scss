@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,900italic);
 
 body{
 	font-family: $corefont;
@@ -10,4 +10,8 @@ body{
 h1{
 	font-family: $secondaryfont;
 	font-weight: 700;
+	font-size:em(27);
+	@include breaker($leia){
+		font-size:em(36);
+	}
 }

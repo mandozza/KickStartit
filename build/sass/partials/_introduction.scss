@@ -7,6 +7,10 @@
 	color:$sixthcolor;
 	@include letterpress(.3);
 	.thumbnail{
+		margin-top:em(-42);
+		@include breaker($leia){
+			margin-top:em(0);
+		}
 		padding-top:em(50);
 		margin-left:auto;
 		margin-right:auto;

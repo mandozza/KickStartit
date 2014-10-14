@@ -2,21 +2,46 @@
 	position:relative;
 	border-top: 5px $secondcolor solid;
 	background-color: $corecolor;
-	font-color:sixthcolor;
-	padding-top: em(56);
+	color:$sixthcolor;
+	padding-top: em(36);
 	ul{
 		@include reset-ul();
 		@include clearfix();
 	}
 	li{
-
+	@include clearfix();
+           padding:20px;
 		text-align: center;
+		.thumbnail{
+			@include breaker($c3p0){
+				width:40%;
+				float:left;
+			}
+		}
+		.quote{
+			margin-top:em(16);
+			background-color: darken($corecolor,10%);
+			padding:20px;
+			border-radius:$border-radius;
+			@include breaker($c3p0){
+				margin-top:em(-5);
+				width:60%;
+				float:left;
+			}
+			@include breaker($chewie){
+				margin-top:em(50);
+
+			}
+
+		}
 		img{
 			max-width:70%;
 		}
 		.author{
 			font-size:em(32);
-			font-family: secondfont;
+			font-family: $secondaryfont;
+			font-weight: 700;
+
 			color:$fifthcolor;
 			@include letterpress(.3);
 		}
@@ -24,6 +49,8 @@
 			margin-top:0;
 			font-size:em(18);
 			font-family: corefont;
+			font-weight: 900;
+			font-style: italic;
 			color:$thirdcolor;
 			font-weight:400;
 			@include letterpress(.3);

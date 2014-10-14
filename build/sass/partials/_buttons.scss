@@ -84,56 +84,6 @@ button{
 
 }
 
-/*social*/
-
-/* SOCIAL BUTTONS*/
-.btn-twitter{
-      background-color: $twittercolor;
-      &:hover{
-        background-color: darken($twittercolor,20%);
-      }
-}
-
-.btn-facebook{
-      background-color: $facebookcolor;
-       &:hover{
-        background-color: darken($facebookcolor,20%);
-      }
-}
-
-
-.btn-twitter,.btn-facebook{
-  font-size:em(13);
-  width:48%;
-  max-width:em(160);
- @include breaker($r2d2) {
-      font-size:em(14);
-  }
-
-
-  @include breaker($c3p0) {
-      font-size:em(16);
-  }
-
-}
-.btn_login-facebook{
-  width:95%;
-}
-.btn_login-twitter{
-  width:95%;
-}
-
-.btn-viewall{
-    background-color: $thirdcolor;
-}
-
-.btn-upload{
-
-}
-
-.btn-remove{
-
-}
 
 .btn-clickhere{
   margin-top:1em;
