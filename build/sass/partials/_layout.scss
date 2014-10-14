@@ -13,15 +13,7 @@ body{
     width: 100%;
     position: relative;
     z-index: 1; /* Site sits above Slidebars */
-    background: url($maincontentbg);
 
-    @include breaker($c3p0) {
-  	background: url($maincontentbg);
-      }
-
-    @include breaker($leia) {
-  	   background: none;
-      }
 }
 
 #wrapper{
